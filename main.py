@@ -20,7 +20,7 @@ words = ['LUB', 'LORRY']
 mx = my = 10 # pwen maksimal yo
 
 # Jenere matris lèt aleyatwa yo
-matrix = [[f'{random.choices(string.ascii_uppercase)}' for y in range(mx)] for x in range(mx)]
+matrix = [[random.choice(string.ascii_uppercase) for y in range(mx)] for x in range(mx)]
 
 # Memorize lèt ak pozisyon ki jenere deja yo, pou jere entèseksyon lèt yo
 taken_pos = [] # TODO: Sa pa ko fèt
@@ -53,7 +53,7 @@ for w in words:
     # Afichaj chak lèt nan matris ki te jenere a
     for i in range(sp[0], endx, stepx):
         for j in range(sp[1], endy, stepy):
-            matrix[i][j] = f'[{w[count]}]'
+            matrix[i][j] = w[count]
             taken_pos.append([(i,j), w[count]]) # Anrejistre mo ak pozisyon ki chwazi a
             count += 1
 
